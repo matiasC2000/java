@@ -1,0 +1,32 @@
+package misServlet;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.annotation.WebListener;
+
+/**
+ * Application Lifecycle Listener implementation class InicializaStock
+ *
+ */
+@WebListener
+public class InicializaStock implements ServletContextListener {
+    /**
+     * Default constructor. 
+     */
+    public InicializaStock() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public void contextInitialized(ServletContextEvent sce) {
+		ServletContextListener.super.contextInitialized(sce);
+		
+		ServletContext context = getServletContext();
+
+        // Recuperar el valor del parámetro "stock" del contexto
+        String stockPath = context.getInitParameter("stock");
+
+	}
+    
+	
+}

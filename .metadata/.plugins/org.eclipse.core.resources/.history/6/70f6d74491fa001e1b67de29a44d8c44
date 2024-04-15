@@ -1,0 +1,94 @@
+package misServlets;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
+
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+
+/**
+ * Servlet implementation class Facturar
+ */
+@WebServlet("/Facturar")
+public class Facturar extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Facturar() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession();
+		
+		HashMap<String, Integer> golosinas = new HashMap<>();
+		
+		Enumeration<String> paramNames = request.getParameterNames();
+		for (String paramName : Collections.list(paramNames)) {
+			int cant = Integer.parseInt(request.getParameter(paramName));
+			golosinas.put(paramName, cant);
+			session.setAttribute(paramName, cant);
+		}
+		//tengo que tomar el request y por todos los atributos
+		//e ir agregando los atributos a una variable y pedir una session para agregar en los atributos que compro
+		
+		
+		response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+		out.println("<html><head><title>Productos</title></head><body>");
+		
+		out.println("<form action=\"TerminarSesion\" method=\"post\">");
+	    
+		out.println("<table border=\"1\">\n"
+				+ "        <thead>\n"
+				+ "            <tr>\n"
+				+ "                <th>Nombre</th>\n"
+				+ "                <th>Cantidad</th>\n"
+				+ "            </tr>\n"
+				+ "        </thead>");
+	    
+		out.println("<tbody>");
+		
+	    for (Map.Entry<String, Integer> entry : golosinas.entrySet()) {
+	    	String nombre = entry.getKey();
+	        Integer valor = entry.getValue();
+	        out.println("</tr>");
+	        out.println("<td>"+nombre+"</td>");
+	        out.println("<td>"+valor+"</td>");
+	        out.println("<td> <input type=\"text\" id="+nombre+" name="+nombre+" required>");
+	        out.println("</tr>");
+	        //System.out.println("Golosina: " + nombre + ", Valor: " + valor);
+	    }
+	    
+	    out.println("</tbody>");
+	    out.println("</table>");
+	    out.println("<button type=\"submit\" name=\"Facturar\">Facturar</button>");
+	    out.println("</form>");
+	    out.println("</body></html>");
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+	
+	}
+
+}

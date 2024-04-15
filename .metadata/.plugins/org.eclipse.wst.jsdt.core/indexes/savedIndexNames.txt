@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+/home/calvo/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+535057638.index
+1870053899.index
+1501772140.index
+3568863043.index

@@ -1,0 +1,92 @@
+package misServlets;
+
+import jakarta.servlet.http.HttpServlet;
+import java.io.IOException;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+
+/**
+ * Servlet implementation class Productos
+ */
+public class Productos extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private Map<String, Double> golosinas;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+	public void init (ServletConfig config) throws ServletException{
+    	super.init(config);
+    	
+    	golosinas = new HashMap<>();
+    	
+    	int total = Integer.parseInt(getInitParameter("cantidadTotal"));
+    	
+    	for(int i = 0; i<total;i++) {
+    		String nombre = config.getInitParameter("golo"+i);
+    		double precio = Double.parseDouble(config.getInitParameter("pu"+i));
+    		golosinas.put(nombre, precio);
+    	}
+    }
+	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//cuando bien tengo que pedir al secion y me fijo que es lo que compro antes
+		response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+		out.println("<html><head><title>Productos</title></head><body>");
+		
+		out.println("<form action=\"Facturar\" method=\"post\">");
+	    
+		out.println("<table border=\"1\">\n"
+				+ "        <thead>\n"
+				+ "            <tr>\n"
+				+ "                <th>Nombre</th>\n"
+				+ "                <th>Precio</th>\n"
+				+ "            </tr>\n"
+				+ "        </thead>");
+	    
+		out.println("<tbody>");
+		
+	    for (Map.Entry<String, Double> entry : golosinas.entrySet()) {
+	    	String nombre = entry.getKey();
+	        double valor = entry.getValue();
+	        out.println("</tr>");
+	        out.println("<td>"+nombre+"</td>");
+	        out.println("<td>"+valor+"</td>");
+	        out.println("<td> <input type=\"number\" id="+ nombre +" name="+ nombre +" step=\"1\">");
+	        out.println("</tr>");
+	        //System.out.println("Golosina: " + nombre + ", Valor: " + valor);
+	    }
+	    
+	    out.println("</tbody>");
+	    out.println("</table>");
+	    out.println("<button type=\"submit\" name=\"facturar\">Facturar</button>");
+	    out.println("</form>");
+	    out.println("</body></html>");
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	}
+
+}

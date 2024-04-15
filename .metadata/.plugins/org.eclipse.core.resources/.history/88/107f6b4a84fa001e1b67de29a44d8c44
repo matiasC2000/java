@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+<servlet>
+    <description></description>
+    <display-name>LoginUsr</display-name>
+    <servlet-name>LoginUsr</servlet-name>
+    <servlet-class>misservlets.LoginUsr</servlet-class>
+    <init-param>
+      <param-name>pikarichu64</param-name>
+      <param-value>lucio</param-value>
+    </init-param>
+    <init-param>
+      <param-name>jasenar</param-name>
+      <param-value>nestor</param-value>
+    </init-param>
+    <init-param>
+      <param-name>maxwell16</param-name>
+      <param-value>axel</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginUsr</servlet-name>
+    <url-pattern>/LoginUsr</url-pattern>
+  </servlet-mapping>
+  <display-name>Practica2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+    <servlet>
+        <servlet-name>Productos</servlet-name>
+        <servlet-class>Productos</servlet-class>
+        <!-- Parámetros de inicialización -->
+        <init-param>
+            <param-name>cantTotal</param-name>
+            <param-value>3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>golo0</param-name>
+            <param-value>Chicle</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pu0</param-name>
+            <param-value>0.5</param-value>
+        </init-param>
+        <init-param>
+            <param-name>golo1</param-name>
+            <param-value>Chicle1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pu1</param-name>
+            <param-value>1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>golo2</param-name>
+            <param-value>Chicle2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pu2</param-name>
+            <param-value>5</param-value>
+        </init-param>
+        <!-- Agrega más parámetros de inicialización según sea necesario -->
+    </servlet>
+  
+  
+  
+</web-app>

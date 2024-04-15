@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+	<context-param>
+		<param-name>email</param-name>
+ 		<param-value>admin@info.unlp.edu.ar</param-value>
+ 	</context-param>
+    <servlet>
+        <servlet-name>LoginUsr</servlet-name>
+        <servlet-class>misservlets.LoginUsr</servlet-class>
+        <!-- Aquí puedes agregar los parámetros de inicialización -->
+        <init-param>
+            <param-name>u1</param-name>
+            <param-value>c1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>u2</param-name>
+            <param-value>c2</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Productos</servlet-name>
+        <servlet-class>Productos</servlet-class>
+        <!-- Parámetros de inicialización -->
+        <init-param>
+            <param-name>cantTotal</param-name>
+            <param-value>3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>golo0</param-name>
+            <param-value>Chicle</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pu0</param-name>
+            <param-value>0.5</param-value>
+        </init-param>
+        <init-param>
+            <param-name>golo1</param-name>
+            <param-value>Chicle1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pu1</param-name>
+            <param-value>1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>golo2</param-name>
+            <param-value>Chicle2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pu2</param-name>
+            <param-value>5</param-value>
+        </init-param>
+        <!-- Agrega más parámetros de inicialización según sea necesario -->
+    </servlet>
+</web-app>

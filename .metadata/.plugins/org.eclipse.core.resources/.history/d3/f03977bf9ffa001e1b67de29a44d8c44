@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+</head>
+<body>
+    <h1>Formulario de Inicio</h1>
+    <form action="controla" method="post">
+        <label for="nombre">Ingrese su nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        
+        <label>Seleccione una opción:</label><br>
+        <input type="radio" id="opcion1" name="opcion" value="Servlet Hola" required>
+        <label for="opcion1">Servlet Hola</label><br>
+        
+        <input type="radio" id="opcion2" name="opcion" value="Productos">
+        <label for="opcion2">Productos</label><br>
+        
+        <input type="radio" id="opcion3" name="opcion" value="Google">
+        <label for="opcion3">Google</label><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
