@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+ version="2.1">
+ 
+	<persistence-unit name="persistencia">
+	 <provider>org.hibernate.ejb.HibernatePersistence</provider>
+	 <class>modelos.Item</class>
+	 <properties> <!--base de datos,url,usuario,contraseñas-->
+		 <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+		 <property name="hibernate.connection.password" value="jyaa2023_pwd9"/> <!--jyaa2023_pwd9  -->
+		 <property name="hibernate.connection.url" value="jdbc:mysql://mysql.java.linti.unlp.edu.ar:3306/jyaa2023_bd9?useSSL=false"/> <!--jyaa2023_bd9  -->
+		 <property name="hibernate.connection.username" value="jyaa2023_usr9" /> <!--jyaa2023_usr9  -->
+		 <property name="hibernate.default_schema" value="stock" />
+		 <!--  <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+		 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+	 </properties>
+	</persistence-unit>
+ 
+</persistence>

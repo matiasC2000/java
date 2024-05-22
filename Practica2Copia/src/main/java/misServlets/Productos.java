@@ -16,6 +16,7 @@ import java.util.Hashtable;
 import java.util.Map;
 
 import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 
@@ -34,10 +35,13 @@ public class Productos extends HttpServlet {
      */
 	public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        cant = Integer.parseInt(config.getInitParameter("cantidadTotal"));
+        ServletContext context = getServletContext();
+        cant = (int) context.getAttribute("cantidadTotal");		//Integer.parseInt( config.getInitParameter
         for (int i = 0; i < cant; i++) {
-        	producnombres.put("golo"+i, config.getInitParameter("golo"+i));
-        	producprecios.put("pu"+i, Integer.parseInt(config.getInitParameter("pu"+i)));
+        	String axi = (String) context.getAttribute("golo"+i);
+        	producnombres.put("golo"+i, axi);
+        	String axi1 = (String)context.getAttribute("pu"+i);
+        	producprecios.put("pu"+i, Integer.parseInt(axi1));
         }
     }
 	

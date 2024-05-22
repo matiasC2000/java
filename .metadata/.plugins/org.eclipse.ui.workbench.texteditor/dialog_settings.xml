@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="&lt;project xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;"/>
 			<item value="Practica2Copia/"/>
 			<item value="i - 1"/>
 			<item value="golosinasSeleccionadas"/>

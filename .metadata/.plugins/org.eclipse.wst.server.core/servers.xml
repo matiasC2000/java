@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v10.0 Server at localhost" name="Tomcat v10.0 Server at localhost" runtime-id="Apache Tomcat v10.0" server-type="org.eclipse.jst.server.tomcat.100" server-type-id="org.eclipse.jst.server.tomcat.100" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="7">
-    <list key="modules" value0="Practica1Web40::org.eclipse.jst.jee.server:Practica1Web40::jst.web::4.0" value1="Practica2Copia::org.eclipse.jst.jee.server:Practica2Copia::jst.web::4.0" value2="Practica3Copia::org.eclipse.jst.jee.server:Practica3Copia::jst.web::5.0"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v10.0 Server at localhost" name="Tomcat v10.0 Server at localhost" runtime-id="Apache Tomcat v10.0" server-type="org.eclipse.jst.server.tomcat.100" server-type-id="org.eclipse.jst.server.tomcat.100" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="8">
+    <list key="modules" value0="Practica1Web40::org.eclipse.jst.jee.server:Practica1Web40::jst.web::4.0" value1="Practica2Copia::org.eclipse.jst.jee.server:Practica2Copia::jst.web::4.0" value2="Practica3Copia::org.eclipse.jst.jee.server:Practica3Copia::jst.web::5.0" value3="practica-jpa::org.eclipse.jst.jee.server:practica-jpa::jst.web::2.5"/>
   </server>
 </servers>

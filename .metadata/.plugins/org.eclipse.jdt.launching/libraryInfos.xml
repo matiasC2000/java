@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
+    <libraryInfo home="/home/calvo/Escritorio/java/Archivos/openjdk-17.0.2_linux-x64_bin/jdk-17.0.2/bin" version="17.0.2"/>
     <libraryInfo home="/home/calvo/Escritorio/java/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.1.v20211116-1657" version="17.0.1"/>
     <libraryInfo home="/home/calvo/Escritorio/java/eclipse-jee-2021-12-R-linux-gtk-x86_64/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.1.v20211116-1657" version="17.0.1"/>
+    <libraryInfo home="/usr/lib/jvm/java-8-openjdk-amd64" version="1.8.0_402">
+        <bootpath>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar"/>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar"/>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar"/>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar"/>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar"/>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar"/>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar"/>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext"/>
+            <entry path="/usr/java/packages/lib/ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="/usr/lib/jvm/java-11-openjdk-amd64" version="11.0.22"/>
     <libraryInfo home="/home/calvo/Escritorio/java/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.1.v20211116-1657/jre" version="17.0.1"/>
     <libraryInfo home="/home/calvo/Escritorio/java/eclipse-jee-2021-12-R-linux-gtk-x86_64/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.1.v20211116-1657/jre" version="17.0.1"/>
 </libraryInfos>
